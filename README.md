@@ -4,6 +4,16 @@ Public, static GitHub Pages site for PM: in-game art and one Download PM link.
 PM is a shared online exploration world for Linux and Windows.
 No sign-in, third-party scripts, or build step is required.
 
+The background is a silent, 10-minute video: a first-person view of the game's
+stars making one complete, slow turn. It contains no character, terrain, moon,
+or interface. The rotation returns to its starting orientation at the loop
+boundary. WebM and H.264 MP4 versions support desktop and mobile browsers.
+The page fills one viewport without scrolling in portrait or landscape.
+
+`background.js` loads the video only when motion is allowed and the page is
+visible. A still frame remains visible while it loads, when autoplay is blocked,
+or when the visitor requests reduced motion. Playback pauses in hidden tabs.
+
 ## Hosting
 
 Publish this directory to the `main` branch root of `xPollutionx/PM`.

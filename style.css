@@ -2,11 +2,12 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
 main { position: fixed; inset: 0; height: 100svh; height: 100dvh; overflow: hidden; }
-picture, img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
-img { object-fit: cover; object-position: 50% 50%; image-rendering: pixelated; user-select: none; }
+.sky { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; user-select: none; pointer-events: none; }
+#sky-video { visibility: hidden; }
+#sky-video.is-playing { visibility: visible; }
 #download { position: absolute; left: 50%; bottom: max(7vh, env(safe-area-inset-bottom, 0px) + 20px); transform: translateX(-50%); min-width: 172px; min-height: 52px; padding: 15px 26px; border: 1px solid #f7e9c8; border-radius: 3px; background: #f0e5c9; color: #172a2c; box-shadow: 0 3px 0 #13282280; font: 600 15px/1.3 ui-sans-serif, system-ui, sans-serif; letter-spacing: .015em; text-decoration: none; text-align: center; cursor: pointer; transition: background-color .15s, box-shadow .15s; -webkit-tap-highlight-color: transparent; }
 #download:hover { background: #fff3d7; box-shadow: 0 4px 0 #13282290; }
 #download:active { margin-bottom: -2px; box-shadow: 0 1px 0 #13282280; }
 #download:focus-visible { outline: 3px solid #8bffc2; outline-offset: 5px; }
 @media (max-height: 360px) { #download { bottom: max(18px, env(safe-area-inset-bottom, 0px)); min-height: 44px; padding-block: 11px; } }
-@media (prefers-reduced-motion: reduce) { #download { transition: none; } }
+@media (prefers-reduced-motion: reduce) { #sky-video.is-playing { visibility: hidden; } #download { transition: none; } }
