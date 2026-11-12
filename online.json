@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "protocol": 2,
+  "world": "pm-world-v1",
+  "relay_url": "wss://pm-online-relay.pm-online-relay.workers.dev/connect"
+}
