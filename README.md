@@ -42,7 +42,7 @@ A new release gives a five-minute quit warning; relaunch installs the verified u
 Older builds need one upgrade before they can display these warnings, and downloads
 from before the updater need that upgrade manually.
 
-The current public release is `demo-2026.11.12-shared-world`, including menu-only microphone
+The current public release is `demo-2026.11.12-microphone-recovery`, including menu-only microphone
 controls, shared environment state and pushed release notifications.
 
 The link detects Windows and Linux devices and selects their matching download.
