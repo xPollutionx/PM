@@ -33,9 +33,17 @@ Mark the current demo as the latest release. The download link uses GitHub's
 `releases/latest/download/` URL, so a new latest release updates downloads
 without editing the page. Drafts and prereleases are not selected by this URL.
 
-The link selects Windows on Windows devices and Linux otherwise.
+The link detects Windows and Linux devices and selects their matching download.
+On iPhone/iPad, tapping it opens an iOS availability message: PM is not developed
+for iOS, and there are currently no plans for an iOS version. Android, macOS and
+unrecognized devices see a Windows/Linux availability message instead of receiving
+an incompatible archive. The page and dialog use the game's Atari Classic Chunky font.
 Use `?platform=windows` or `?platform=linux` to select explicitly.
-Without JavaScript, the link downloads Linux.
+Without JavaScript, the link opens the release page for manual selection.
+
+The unmodified Atari Classic font is copyrighted freeware by Mark Simonson.
+Its original [documentation and distribution terms](assets/AtariClassic-ReadMe.pdf)
+accompany the font; the source archive is [Atari Classic 2.0](https://members.bitstream.net/marksim/atarimac/acttf.zip).
 
 Keep game source, credentials, build caches, and local deployment metadata out
 of this static website repository.
