@@ -27,11 +27,15 @@ Attach these exact filenames to each published GitHub Release:
 
 - `PM-linux-x86_64.zip`
 - `PM-windows-x86_64.zip`
-- `SHA256SUMS` (recommended)
+- `release.json`
+- `SHA256SUMS`
 
 Mark the current demo as the latest release. The download link uses GitHub's
 `releases/latest/download/` URL, so a new latest release updates downloads
 without editing the page. Drafts and prereleases are not selected by this URL.
+Use a fresh tag matching the identity embedded by `scripts/package_demo.py` and
+publish all four assets together. Packaged games verify updates and apply them on
+the next launch. Downloads from before the updater need one manual ZIP upgrade.
 
 The link detects Windows and Linux devices and selects their matching download.
 On iPhone/iPad, tapping it opens an iOS availability message: PM is not developed
@@ -50,8 +54,8 @@ of this static website repository.
 
 ## Play online
 
-Download and extract the ZIP for your platform, then run PM. Open **M → CHAT → Join world**. Everyone connects to the same map; no account, room code, or router setup is needed. The world uses load-based admission instead of a fixed player cap; busy arrivals wait in a queue. Older downloads must update to the latest release and reconnect. **Meet at spawn** brings you to the shared arrival clearing without changing your saved spawn.
+Download and extract the ZIP for your platform, then run PM. Everyone automatically connects to the same map, with automatic reconnection after interruptions; no account, room code, or router setup is needed. The world uses load-based admission instead of a fixed player cap; busy arrivals wait in a queue. Older downloads must update to the latest release and reconnect. **M / Start → CHAT → Meet at spawn** brings you to the shared arrival clearing without changing your saved spawn.
 
-Enable your microphone and hold **T / R3** while playing to talk to nearby players. Voices fade out beyond 28 metres. Microphones begin off, and leaving the world does not disconnect other players.
+The microphone starts on in open-mic mode once connected. Press **T / R3** to mute or unmute during play; **M / Start → CHAT** also offers mute and optional push-to-talk with **T / R3**. Voices fade out beyond 28 metres. Menus and switching away pause capture; only active gameplay can transmit. A mute choice survives reconnects in that session. Closing PM does not disconnect other players.
 
 `online.json` supplies the permanent secure server address. Its `version` is the discovery schema (1); `protocol` is the game transport version (3), and `world` identifies `pm-world-v1`. Publish that file only after the service has passed a live connection check. It contains no credentials. GitHub Pages serves the artwork and downloads page; the shared world runs independently on Cloudflare.
