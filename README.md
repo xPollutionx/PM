@@ -1,6 +1,6 @@
 # PM download page
 
-Public, static GitHub Pages site for PM: in-game art and one Download PM link.
+Public, static GitHub Pages site for PM: in-game art, Download PM and a bottom-right Discord button.
 PM is a shared online exploration world for Linux and Windows.
 No sign-in, third-party scripts, or build step is required.
 
@@ -9,6 +9,8 @@ stars making one complete, slow turn. It contains no character, terrain, moon,
 or interface. The rotation returns to its starting orientation at the loop
 boundary. WebM and H.264 MP4 versions support desktop and mobile browsers.
 The page fills one viewport without scrolling in portrait or landscape.
+The Discord button uses the same Atari font and opens the [PM server](https://discord.gg/j3BJHKeQuq)
+in a new tab, including when the page is framed by pmgame.app.
 
 `background.js` loads the video only when motion is allowed and the page is
 visible. A still frame remains visible while it loads, when autoplay is blocked,

@@ -6,14 +6,17 @@ main { position: fixed; inset: 0; height: 100svh; height: 100dvh; overflow: hidd
 .sky { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; user-select: none; pointer-events: none; }
 #sky-video { visibility: hidden; }
 #sky-video.is-playing { visibility: visible; }
-#download { position: absolute; left: 50%; bottom: max(7vh, env(safe-area-inset-bottom, 0px) + 20px); transform: translateX(-50%); min-width: 172px; min-height: 52px; padding: 15px 26px; border: 1px solid #f7e9c8; border-radius: 3px; background: #f0e5c9; color: #172a2c; box-shadow: 0 3px 0 #13282280; font: 400 16px/1.5 "Atari Classic", monospace; text-decoration: none; text-align: center; white-space: nowrap; cursor: pointer; transition: background-color .15s, box-shadow .15s; -webkit-tap-highlight-color: transparent; }
-#download:hover { background: #fff3d7; box-shadow: 0 4px 0 #13282290; }
-#download:active { margin-bottom: -2px; box-shadow: 0 1px 0 #13282280; }
-#download:focus-visible { outline: 3px solid #8bffc2; outline-offset: 5px; }
+.button { position: absolute; min-width: 172px; min-height: 52px; padding: 15px 26px; border: 1px solid #f7e9c8; border-radius: 3px; background: #f0e5c9; color: #172a2c; box-shadow: 0 3px 0 #13282280; font: 400 16px/1.5 "Atari Classic", monospace; text-decoration: none; text-align: center; white-space: nowrap; cursor: pointer; transition: background-color .15s, box-shadow .15s; -webkit-tap-highlight-color: transparent; }
+#download { left: 50%; bottom: max(7vh, env(safe-area-inset-bottom, 0px) + 20px); transform: translateX(-50%); }
+#discord { right: max(16px, env(safe-area-inset-right, 0px) + 16px); bottom: max(16px, env(safe-area-inset-bottom, 0px) + 16px); min-width: 0; min-height: 44px; padding: 11px 14px; font-size: 12px; }
+.button:hover { background: #fff3d7; box-shadow: 0 4px 0 #13282290; }
+.button:active { margin-bottom: -2px; box-shadow: 0 1px 0 #13282280; }
+.button:focus-visible { outline: 3px solid #8bffc2; outline-offset: 5px; }
 dialog { width: min(560px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 24px; border: 2px solid #f0e5c9; background: #071329; color: #f0e5c9; font: 400 14px/1.65 "Atari Classic", monospace; text-align: center; }
 dialog::backdrop { background: #071329b3; }
 dialog p { margin: 0 0 20px; }
 dialog button { min-width: 80px; min-height: 44px; border: 1px solid #f7e9c8; background: #f0e5c9; color: #172a2c; font: inherit; cursor: pointer; }
 dialog button:focus-visible { outline: 3px solid #8bffc2; outline-offset: 4px; }
 @media (max-height: 360px) { #download { bottom: max(18px, env(safe-area-inset-bottom, 0px)); min-height: 44px; padding-block: 11px; } }
-@media (prefers-reduced-motion: reduce) { #sky-video.is-playing { visibility: hidden; } #download { transition: none; } }
+@media (max-width: 640px) { #download { bottom: max(88px, env(safe-area-inset-bottom, 0px) + 88px); } }
+@media (prefers-reduced-motion: reduce) { #sky-video.is-playing { visibility: hidden; } .button { transition: none; } }
