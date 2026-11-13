@@ -38,11 +38,11 @@ without editing the page. Drafts and prereleases are not selected by this URL.
 Use a fresh tag matching the identity embedded by `scripts/package_demo.py` and
 publish all four assets together. The local update implementation checks once at
 startup and receives release notifications from the server, without interval polling.
-A new release gives a five-minute quit warning; relaunch installs the verified update.
+After the new download passes verification, a five-minute quit warning appears; relaunch installs the verified update.
 Older builds need one upgrade before they can display these warnings, and downloads
 from before the updater need that upgrade manually.
 
-The current public release is `demo-2026.11.12-voice-smoothing`, including menu-only microphone
+The current public release is `demo-2026.11.12-freeze-repair`, including menu-only microphone
 controls, shared environment state and pushed release notifications.
 
 The link detects Windows and Linux devices and selects their matching download.
