@@ -42,7 +42,7 @@ After the new download passes verification, a five-minute quit warning appears; 
 Older builds need one upgrade before they can display these warnings, and downloads
 from before the updater need that upgrade manually.
 
-The current public release is `demo-2026.11.12-freeze-repair`, including menu-only microphone
+The current public release is `demo-2026.11.13-foliage-unlocks`, including menu-only microphone
 controls, shared environment state and pushed release notifications.
 
 The link detects Windows and Linux devices and selects their matching download.
