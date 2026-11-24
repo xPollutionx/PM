@@ -42,8 +42,7 @@ After the new download passes verification, a five-minute quit warning appears; 
 Older builds need one upgrade before they can display these warnings, and downloads
 from before the updater need that upgrade manually.
 
-The current public release is `demo-2026.11.13-foliage-unlocks`, including menu-only microphone
-controls, shared environment state and pushed release notifications.
+[Latest public build and release notes](https://github.com/xPollutionx/PM/releases/latest).
 
 The link detects Windows and Linux devices and selects their matching download.
 On iPhone/iPad, tapping it opens an iOS availability message: PM is not developed
@@ -64,7 +63,7 @@ of this static website repository.
 
 Download and extract the ZIP for your platform, then run PM. Everyone automatically connects to the same map, with automatic reconnection after interruptions; no account, room code, or router setup is needed. Gameplay waits for admission and shared world state; menus remain available. The world uses load-based admission instead of a fixed player cap; busy arrivals wait in a queue. Older downloads must update to the latest release and reconnect. **M / Start → CHAT → Meet at spawn** brings you to the shared arrival clearing without changing your saved spawn.
 
-The microphone starts on in open-mic mode once connected. Manage it only through **M / Start → CHAT → Microphone on**. Voices fade out beyond 36 metres. An enabled connected microphone stays on in menus and while PM is in the background. A mute choice survives reconnects in that session. Closing PM does not disconnect other players.
+The microphone starts on in open-mic mode once connected. Manage it only through **M / Start → CHAT → Microphone on**. Proximity voice reaches 128 metres. Party members can hear one another across the island. An enabled connected microphone stays on in menus and while PM is in the background. A mute choice survives reconnects in that session. Closing PM does not disconnect other players.
 
 `online.json` supplies the permanent secure server address. Its `version` is the discovery schema (1); `protocol` is the game transport version (3), and `world` identifies `pm-world-v1`. Publish that file only after the service has passed a live connection check. It contains no credentials. GitHub Pages serves the artwork and downloads page; the shared world runs independently on Cloudflare.
 
